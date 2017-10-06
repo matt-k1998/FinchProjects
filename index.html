@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Finch button</title>
+  </head>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.3/socket.io.js"></script>
+      <script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+      <script>
+
+        $(function () {
+            var socket = io();
+            
+            $('form').submit(function(){
+
+              socket.emit('flashFinchLights');
+
+              return false;
+            });
+
+
+          });
+
+      </script> 
+
+      <form action="">
+        <button>Send</button>
+      </form>
+      
+  </body>
+</html>
